@@ -9,18 +9,12 @@ It's port of debugprobe for cheap ~2$ board with extra support of on-board rgb l
 
 ### Pinout:
 ```
-GP8     TX
-GP9     RX
-GP10    SWCLK
-GP11    SWDIO
-GP12    GND
-GP13    GND
-GP14    3V3
+GP8     TX      YELLOW
+GP9     RX      GREEN
+GP10    SWCLK   BLUE
+GP11    SWDIO   WHITE
 ```
 
-![probe_image](img/img1.jpg)
-
-![probe_image](img/img2.jpg)
 
 ### Led legend:
 - Dimm red: power on, bright red: usb comm.

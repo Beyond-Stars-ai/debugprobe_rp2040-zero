@@ -116,7 +116,7 @@ void usb_thread(void *ptr)
 #endif
 #ifdef DEBUG_ON_ZERO
         if (tud_ready())
-            led_red_set(0xFF);
+            led_red_set(0x80);
         else
             led_red_set(0x10);
 #endif

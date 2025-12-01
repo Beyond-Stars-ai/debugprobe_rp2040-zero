@@ -509,7 +509,7 @@ __STATIC_INLINE void LED_CONNECTED_OUT (uint32_t bit) {
 #ifdef DEBUG_ON_ZERO
         extern void led_green_set(uint8_t set);
         if(bit)
-            led_green_set(0xFF);
+            led_green_set(0x60);
         else
             led_green_set(0x00);
 #endif
@@ -579,6 +579,10 @@ __STATIC_INLINE void DAP_SETUP (void) {
 #ifdef PROBE_DAP_RUNNING_LED
     gpio_init(PROBE_DAP_RUNNING_LED);
     gpio_set_dir(PROBE_DAP_RUNNING_LED, GPIO_OUT);
+#endif
+#ifdef DEBUG_ON_ZERO
+    extern void led_init(void);
+    led_init();
 #endif
 }
 
