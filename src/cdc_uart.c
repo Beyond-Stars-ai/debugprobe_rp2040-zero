@@ -122,6 +122,10 @@ bool cdc_task(void)
           led_blue_set(0x80);
           rx_led_debounce = debounce_ticks;
 #endif
+#ifdef DEBUG_ON_ZERO
+          led_blue_set(0xFF);
+          rx_led_debounce = debounce_ticks;
+#endif
           written = MIN(tud_cdc_write_available(), rx_len);
           if (rx_len > written)
               cdc_tx_oe++;
